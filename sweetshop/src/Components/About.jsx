@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../css/About.css";
+import "../css/about.css";
 import m1 from "../assets/del.png";
 import m2 from "../assets/real-Photoroom.png";
 import m3 from "../assets/n-Photoroom.png";
