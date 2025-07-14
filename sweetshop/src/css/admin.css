@@ -1,0 +1,87 @@
+
+/* src/components/Sidebar.css */
+.sidebar {
+  width: 250px;
+  height: 108vh;
+  background-color: #fff5f6;
+  border-right: 1px solid #ffd6e0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar-header {
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #ffd6e0;
+}
+
+.sidebar-header h2 {
+  margin: 0;
+  color: #d23669;
+  font-size: 1.5rem;
+}
+
+.sidebar-menu {
+  flex: 1;
+  padding: 20px 0;
+  overflow-y: auto;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  margin: 5px 10px;
+  border-radius: 8px;
+  color: #555;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+  background-color: #ffebf0;
+  color: #d23669;
+}
+
+.menu-item.active {
+  background-color: #ffd6e0;
+  color: #d23669;
+  font-weight: 500;
+}
+
+.menu-icon {
+  margin-right: 12px;
+  font-size: 1.2rem;
+ 
+}
+
+.menu-text {
+  font-size: 0.95rem;
+}
+
+.sidebar-footer {
+  padding: 15px;
+  border-top: 1px solid #ffd6e0;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.user-profile:hover {
+  background-color: #ffebf0;
+}
+
+.user-avatar {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.user-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+}

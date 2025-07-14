@@ -1,0 +1,95 @@
+.profile-twitter-box {
+  background: rgb(245, 222, 237);
+  border-radius: 16px;
+  padding: 25px 20px;
+  width: 300px;
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.twitter-profile-pic {
+  margin-left: 80px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+  margin-bottom: 10px;
+}
+
+.twitter-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: hsl(344, 100%, 89%);
+  margin: 5px 0;
+}
+
+.twitter-verified {
+  color: #f21d56;
+  font-size: 16px;
+  margin-left: 5px;
+}
+
+.twitter-handle {
+  font-size: 14px;
+  color: hsl(344, 100%, 89%);
+  margin-bottom: 10px;
+}
+
+.twitter-bio {
+  font-size: 14px;
+  color: hsl(344, 100%, 89%);
+  margin-bottom: 12px;
+}
+
+.twitter-info p {
+  font-size: 13px;
+  color: hsl(344, 100%, 89%);
+  margin: 6px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.twitter-info a {
+  color: #f4eff1;
+  text-decoration: none;
+}
+
+.twitter-info .icon {
+  color: #888;
+}
+
+@media (max-width: 1024px) {
+  .profile-twitter-box {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .twitter-profile-pic {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .profile-twitter-box {
+    padding: 20px 15px;
+  }
+
+  .twitter-name {
+    font-size: 16px;
+  }
+
+  .twitter-handle,
+  .twitter-bio,
+  .twitter-info p {
+    font-size: 13px;
+  }
+
+  .twitter-profile-pic {
+    width: 70px;
+    height: 70px;
+  }
+}

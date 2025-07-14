@@ -1,0 +1,124 @@
+/* ─── Orders feed wrapper ──────────────────────────── */
+.orders-container {
+  /* overrides */
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 30px;
+  max-width: 720px;
+  margin: 0;               /* handled by flex */
+}
+
+.orders-container h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #1d1f23;
+  text-align: left;
+}
+
+/* ─── Table like tweet list ───────────────────────────*/
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.orders-table thead {
+  display: none;            /* hide header for cleaner feed look */
+}
+
+.orders-table tr {
+  border: 1px solid #f0f2f5;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.orders-table tr + tr {
+  margin-top: 16px;          /* space between cards */
+}
+
+.orders-table td {
+  padding: 14px 18px;
+  font-size: 14px;
+  color: #3b3d42;
+}
+
+.orders-table td:first-child { width: 80px; }
+.orders-table td:nth-child(2) { width: 140px; }
+.orders-table td:nth-child(3) { width: 100px; }
+.orders-table td:nth-child(4) { width: 100px; }
+
+.orders-table button {
+  background: #ff4fa1;
+  color: #fff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+}
+.orders-table button:hover { background:#ff64ac; }
+
+/* ─── Order-items dropdown (tweet reply style) ─────── */
+.order-item {
+  display: flex;
+  gap: 12px;
+  padding: 10px 0;
+}
+
+.item-image {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.item-details p { margin: 0; font-size: 13px; }
+
+
+@media (max-width: 1024px) {
+  .orders-container {
+    max-width: 100%;
+    padding: 24px;
+  }
+
+  .orders-table td {
+    font-size: 13px;
+    padding: 12px 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .orders-container {
+    padding: 16px;
+  }
+
+  .orders-container h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .orders-table td {
+    font-size: 12px;
+    padding: 10px 10px;
+  }
+
+  .orders-table td:first-child,
+  .orders-table td:nth-child(2),
+  .orders-table td:nth-child(3),
+  .orders-table td:nth-child(4) {
+    width: auto;
+    display: block;
+    text-align: left;
+  }
+
+  .orders-table tr {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .orders-table button {
+    margin-top: 8px;
+    align-self: flex-start;
+  }
+}

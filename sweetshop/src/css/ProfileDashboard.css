@@ -1,0 +1,237 @@
+/* ===== Global layout ===== */
+.movie-layout {
+  display: flex;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+/* ===== Left Hero ===== */
+.hero-panel {
+  flex: 1.2;
+  background: #d05c6a;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
+  color: #fff;
+}
+
+/* vertical icons */
+.side-nav {
+  position: absolute;
+  top: 40px;
+  left: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.side-nav i { width: 20px; height: 20px; background:#fff4; border-radius:4px; }
+
+/* hero text */
+.hero-content {
+  max-width: 380px;
+  z-index: 2;
+}
+.hero-titlee {
+  font-size: 58px;
+  line-height: 1.05;
+  margin: 0 0 15px;
+  margin-left: -70px;
+  width: 600px;
+  color: #000000af;;
+  font-family: "Sega", sans-serif;
+}
+.hero-tagline {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+.hero-buttons button {
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 14px;
+}
+/* .play-btn { background:#fff; color:#46b21d; }
+.fav-btn { background:transparent; color:#fff; border:2px solid #fff; } */
+
+/* hero image */
+.hero-img {
+  position: absolute;
+  bottom: 0;
+  right: -230px;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+  top:80px;
+   animation: float 4s ease-in-out infinite;
+}
+ 
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+/* ===== Right Column ===== */
+.info-panel {
+  flex: 0.8;
+  background: #fae0e3;
+  padding: 40px 30px;
+  overflow-y: auto;
+}
+
+/* profile card tweaks */
+.profile-twitter-box {
+  background:#ed4d7267;
+  border-radius:16px;
+  padding:25px 20px;
+  
+  box-shadow:0 6px 18px rgba(0,0,0,.08);
+}
+
+/* orders card wrapper */
+.orders-container {
+  background:#ca446a41;
+  margin-top:28px;
+  border-radius:16px;
+  box-shadow:0 6px 18px rgba(0,0,0,.08);
+  padding:24px;
+}
+
+.orders-container h2 { 
+  font-size:18px;
+   margin-bottom:18px;
+   font-family: "Poppins", sans-serif;
+  color: #000000af;}
+
+/* orders list looks like “Favourite movies” cells */
+.orders-table thead { display:none; }
+.orders-table tr {
+  background:#faf0f2;
+  border-radius:12px;
+  overflow:hidden;
+  margin-bottom:14px;
+  display:flex;
+  align-items:center;
+}
+.orders-table td {
+  flex:1;
+  padding:14px 18px;
+  font-size:14px;
+  color:#333;
+  border:none;
+}
+.orders-table button {
+  background:#b21d54;
+  border:none;
+  color:#fff;
+  padding:6px 16px;
+  border-radius:20px;
+  font-size:12px;
+}
+
+/* slim scrollbar for info-panel */
+.info-panel::-webkit-scrollbar { width:6px; }
+.info-panel::-webkit-scrollbar-thumb { background:#ccc; border-radius:3px; }
+
+.hero-badge {
+  background: #000000af;
+  display: inline-block;
+  padding: 18px 18px;
+  border-radius: 20px;
+  color: #f996a5;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+
+@media (max-width: 1024px) {
+  .movie-layout {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .hero-panel {
+    flex: none;
+    height: auto;
+    padding: 40px 20px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .hero-titlee {
+    font-size: 38px;
+    width: auto;
+    margin-left: 0;
+  }
+
+  .hero-img {
+    position: relative;
+    top: 20px;
+    right: 0;
+    height: 250px;
+    margin-top: 20px;
+  }
+
+  .info-panel {
+    flex: none;
+    padding: 20px;
+  }
+
+  .profile-twitter-box {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-titlee {
+    font-size: 28px;
+  }
+
+  .orders-table td {
+    font-size: 12px;
+    padding: 10px 12px;
+  }
+
+  .orders-container {
+    padding: 20px;
+  }
+
+  .profile-twitter-box {
+    width: 100%;
+  }
+
+  .side-nav {
+    display: none;
+  }
+}
+
+.hero-badge {
+  animation: pulseBadge 2s infinite;
+}
+
+@keyframes pulseBadge {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px 4px rgba(255, 255, 255, 0.3);
+  }
+}
+@media (max-width: 768px) {
+  .movie-layout {
+    flex-direction: column;
+  }
+
+  .hero-panel,
+  .info-panel {
+    width: 100%;
+    padding: 20px;
+  }
+}

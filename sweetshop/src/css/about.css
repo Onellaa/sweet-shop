@@ -1,0 +1,391 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  /* background: #f9f9f9; */
+  color: #333;
+  overflow-x: hidden;
+}
+
+.about-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* Hero Section */
+/* Hero Section */
+.hero-section1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80vh;
+  background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+  /* background: linear-gradient(135deg, #ff9a9e, #fad0c4); */
+  padding: 0 10%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Wave Background */
+.wave-background {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23ffffff' fill-opacity='0.5' d='M0,160L48,149.3C96,139,192,117,288,128C384,139,480,181,576,176C672,171,768,117,864,101.3C960,85,1056,107,1152,128C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  animation: waveAnimation 10s linear infinite;
+}
+
+@keyframes waveAnimation {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(-20px); }
+  100% { transform: translateX(0); }
+}
+
+.hero-content1 {
+  max-width: 50%;
+  z-index: 2;
+}
+
+.hero-content1 h1 {
+  font-size: 4rem;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.hero-content1 p {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  background: #ff6f61;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+  background: #ff4a3d;
+  transform: translateY(-5px);
+}
+
+.hero-image {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-image img {
+  width: 400px;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+/* Floating Icons */
+.floating-icons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.floating-icons img {
+  position: absolute;
+  width: 80px;
+  animation: float 6s ease-in-out infinite;
+}
+
+.icon-1 {
+  top: 10%;
+  left: 5%;
+  animation-delay: 0s;
+}
+
+.icon-2 {
+  top: 30%;
+  right: 1%;
+  animation-delay: 2s;
+}
+
+.icon-3 {
+  bottom: 20%;
+  left: 20%;
+  animation-delay: 4s;
+}
+
+/* Background Particles */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://www.transparenttextures.com/patterns/candy.png");
+  opacity: 0.1;
+  z-index: 0;
+}
+/* About Section */
+/* About Section */
+.about-section {
+  width: 100%;
+  padding: 80px 0%;
+  background-color: rgb(249, 230, 234);
+  background: radial-gradient(
+    403px at 100% 7%, 
+    #f8e3e8 31.1%,  /* Light pink */
+    #f1b2c0 36.4%,  /* Soft pink */
+    #f1a0bb 50.9%,  /* Medium pink */
+    #f9d0da 60.7%,  /* Pale pink */
+    #f08d8b 72.5%,  /* Darker pink */
+    #f8e3e8 72.6%   /* Light pink (again) */
+  );
+ 
+}
+
+.about-section h2 {
+  font-size: 4rem;
+  color:#f9748f;
+  margin-bottom: 40px; /* Increased margin for better spacing */
+  text-align: center;
+  /* color: #ff97c1; */
+  /* font-family: "Lobster", serif; */
+
+
+}
+
+.about-content-wrapper {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align items to the top */
+  gap: 40px; /* Adds spacing between the elements */
+}
+
+/* Lottie Container on the Left Top */
+.lottie-container {
+  flex: 1;
+  max-width: 30%; /* Adjust width as needed */
+  display: flex;
+  justify-content: flex-start; /* Align to the left */
+  align-items: flex-start; /* Align to the top */
+  margin-top: -170px; /* Adjust to move it higher */
+}
+
+/* Text in the Middle */
+.about-text {
+  flex: 1;
+  padding: 20px;
+  max-width: 40%; /* Adjust width as needed */
+  margin-top: 10px; /* Adjust to align with Lottie */
+  /* From https://css.glass */
+background: rgba(255, 255, 255, 0.2);
+border-radius: 50px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+
+}
+
+
+
+
+.about-text p {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  color: #333;
+  font-weight: 400;
+}
+
+/* Video on the Right */
+.masked-container {
+  flex: 1;
+  max-width: 30%; /* Adjust width as needed */
+  height: 400px; /* Adjust height as needed */
+  display: flex;
+  justify-content: flex-end; /* Align to the right */
+  align-items: flex-start; /* Align to the top */
+  margin-top: -50px; /* Adjust to move it higher */
+}
+
+.masked-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mask-image: url('../assets/blob.png'); /* Path to your mask image */
+  mask-size: cover;
+  mask-repeat: no-repeat;
+  border-radius: 20px; /* Optional: Add rounded corners */
+  margin-top: 12%;
+}
+/* Fortune Section */
+.fortune-section {
+  width: 100%;
+  padding: 80px 10%;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+  text-align: center;
+}
+
+.fortune-section h2 {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.fortune-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cookie-wrapper {
+  cursor: pointer;
+  background: #fff;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.cookie-wrapper:hover {
+  transform: scale(1.1);
+}
+
+.fortune-message {
+  font-size: 1.2rem;
+  color: #333;
+  padding: 20px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.reset-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background: #ff6f61;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.reset-button:hover {
+  background: #ff4a3d;
+}
+
+/* Services Section */
+.services-section {
+  width: 100%;
+  padding: 80px 10%;
+  background: #fff;
+  text-align: center;
+  background-image: url("../assets/leave3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.services-section h2 {
+  font-size: 4rem;
+  color: #ffffff;
+  margin-bottom: 40px;
+  font-weight: bolder;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.service-card {
+  background: #ffe0ee;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.service-image {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  color: #ff6f61;
+  margin: 15px 0;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Parallax Section */
+/* .parallax-section {
+  width: 100%;
+  height: 400px;
+background-color: #f7f0f0;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+/* .parallax-truck {
+  width: 300px;
+  animation: moveTruck 10s linear infinite;
+} */
+
+/* @keyframes moveTruck {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+} */
+
+
+
+.mon{
+  height: 200px;
+  width: 200px;
+}
+

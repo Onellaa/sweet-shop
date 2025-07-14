@@ -1,0 +1,17 @@
+.recipe-page {
+  padding: 30px;
+  color: #333;
+  background: #ffecf4;
+}
+
+.recipe-img {
+  max-width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin: 20px 0;
+}
+
+ul, ol {
+  margin-left: 20px;
+  line-height: 1.7;
+}

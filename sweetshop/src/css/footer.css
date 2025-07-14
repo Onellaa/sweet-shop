@@ -1,0 +1,48 @@
+
+
+.footer {
+  /* margin-top: 20px; */
+  text-align: center;
+  background-image: url('../assets/f1 (1).png'); 
+  background-size: 30%; 
+ background-position:600px; 
+  padding: 50px 0; 
+  background-color: rgb(156, 156, 156);
+  
+  
+}
+
+.f1 {
+  display: none; /* Hide the img element if it's no longer needed */
+  
+}
+
+.socialmedia{
+  /* From https://css.glass */
+background: rgba(92, 91, 91, 0.39);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(7.6px);
+-webkit-backdrop-filter: blur(7.6px);
+border: 1px solid rgba(92, 91, 91, 0.3);
+width: 1000px;
+margin-left: 300px;
+}
+
+.socialmedia a {
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 2px;
+  color: #0e0e0e;
+  display: inline-block;
+  text-align: center;
+  padding: 25px;
+  margin-top: 20px;
+  transition: transform 0.5s;
+  background-color: transparent;
+  
+}
+
+.socialmedia a:hover {
+  transform: scale(1.1); /* Add hover effect for social media links */
+}
