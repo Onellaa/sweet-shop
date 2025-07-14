@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "../css/cartIcon.css"; // Assuming you have a CSS file for styling
+import "../css/CartIcon.css"; // Assuming you have a CSS file for styling
 
 const CartIcon = () => {  
 const[itemCount, setItemCount] = useState(0);
